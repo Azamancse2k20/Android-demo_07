@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appbarId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Tab Layout"
+        app:titleTextColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"/>
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpagerId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appbarId"/>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_mail_black_24dp"
+            android:tint="@color/white"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_margin="20dp"
+
+            />
+
+     <com.getbase.floatingactionbutton.FloatingActionsMenu
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_margin="20dp"
+         android:layout_alignParentStart="true"
+         android:layout_marginLeft="16dp"
+         android:layout_marginStart="16dp"
+         app:fab_addButtonColorNormal="@color/white"
+         app:fab_addButtonColorPressed="#ffffff"
+         app:fab_addButtonPlusIconColor="#5F5959"
+         app:fab_addButtonSize="mini"
+         app:fab_labelStyle="@style/Widget.AppCompat.PopupMenu"
+         app:fab_labelsPosition="right">
+         >
+
+
+         <com.getbase.floatingactionbutton.FloatingActionButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:fab_colorNormal="@color/white"
+             app:fab_title="Message Box"
+             app:fab_colorPressed="#ffffff"
+             android:src="@drawable/sms"
+         />
+
+         <com.getbase.floatingactionbutton.FloatingActionButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:fab_colorNormal="@color/white"
+             app:fab_size="mini"
+             app:fab_title="Mail Box"
+             app:fab_colorPressed="@color/white"
+             android:src="@drawable/ic_mail_black_24dp"
+             />
+
+
+     </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
